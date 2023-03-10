@@ -1,4 +1,42 @@
 body {
     background: lavender;
-    text-align: center;
+
+}
+.accordion {
+    width: 70%;
+    background-color: lightgreen;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+.ac_inp {
+    display: none;
+}
+
+.item label {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+}
+
+.text {
+    padding: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.item :hover + label:before{
+    content: '+';
+    font-size: 20px;
+    float: right;
+}
+
+.ac_inp:checked ~ .text {
+    display: block;
+}
+.ac_inp:checked + label + .text {
+    overflow: auto;
+    height: 15em;
+    transition: 0.5s;
 }
