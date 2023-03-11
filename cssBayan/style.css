@@ -43,7 +43,7 @@ body {
     transition: 0.5s;
 }
 
-.ac_inp:hover ~ .hidden_div {
+.item:hover ~ .hidden_div {
     display: block;
     height: auto;
 }
@@ -74,5 +74,18 @@ body {
 }
 
 .accordion:hover .plus {
+    opacity: 90%;
+}
+
+.item:hover .plus{
+    transform:  rotate(50deg);
+}
+.ac_inp:checked~ label .plus{
+    transform-origin: center center;
+    transform:  rotate(50deg);
+    opacity: 90%;
+}
+
+.ac_inp:checked~ .plus {
     opacity: 90%;
 }
