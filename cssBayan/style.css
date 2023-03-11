@@ -1,6 +1,10 @@
 body {
     background: lavender;
 }
+*{
+    box-sizing:border-box;
+}
+
  h1{
      padding: 0 0 0 0.2em;
  }
@@ -41,24 +45,33 @@ body {
     display: block;
     height: auto;
 }
+
 .ac_inp:hover + label + .hidden_div {
     overflow: auto;
-    height: 15em;
+    height: 25em;
     transition: 0.5s;
 }
+
 .img {
-    padding: 0 0 0 18em;
-    height: 14em;
+    display: flex;
+    transition: all 5s ease-in-out;;
+    height: 100%;
+    width: 100%;
+    padding: 2% 20% 2% 20% ;
 }
 
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
-    height: 15em;
+    height: 25em;
     transition: 0.5s;
 }
-#plus {
+.plus {
     float: right;
-    height: 2em;
-    width: 2em;
+    height: 1em;
+    width: 1em;
+    opacity: 0;
+}
 
+#pic1:hover .plus {
+    opacity: 90%;
 }
