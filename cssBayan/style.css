@@ -1,9 +1,18 @@
 body {
     background: lavender;
-
 }
+ h1{
+     padding: 0 0 0 0.2em;
+ }
+ hr {
+     background: blueviolet;
+     padding: 0.1em;
+     height: 0.1em;
+     border: none;
+ }
+
 .accordion {
-    width: 70%;
+    width: 50%;
     background-color: lightgreen;
     margin: 0 auto;
     cursor: pointer;
@@ -12,31 +21,44 @@ body {
 .ac_inp {
     display: none;
 }
+.item {
+    font-weight: bold;
+}
 
 .item label {
     cursor: pointer;
     display: block;
-    padding: 10px;
+    padding: 0.4em;
 }
 
-.text {
-    padding: 10px;
+.hidden_div {
     height: 0;
     overflow: hidden;
     transition: 0.5s;
 }
 
-.item :hover + label:before{
-    content: '+';
-    font-size: 20px;
-    float: right;
-}
-
-.ac_inp:checked ~ .text {
+.ac_inp:hover ~ .hidden_div {
     display: block;
+    height: auto;
 }
-.ac_inp:checked + label + .text {
+.ac_inp:hover + label + .hidden_div {
     overflow: auto;
     height: 15em;
     transition: 0.5s;
+}
+.img {
+    padding: 0 0 0 18em;
+    height: 14em;
+}
+
+.ac_inp:checked + label + .hidden_div {
+    overflow: auto;
+    height: 15em;
+    transition: 0.5s;
+}
+#plus {
+    float: right;
+    height: 2em;
+    width: 2em;
+
 }
