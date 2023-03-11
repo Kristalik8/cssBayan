@@ -31,8 +31,10 @@ body {
 
 .item label {
     cursor: pointer;
-    display: block;
+    display: flex;
     padding: 0.4em;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .hidden_div {
@@ -66,12 +68,11 @@ body {
     transition: 0.5s;
 }
 .plus {
-    float: right;
     height: 1em;
     width: 1em;
     opacity: 0;
 }
 
-#pic1:hover .plus {
+.accordion:hover .plus {
     opacity: 90%;
 }
