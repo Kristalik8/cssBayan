@@ -1,5 +1,5 @@
 body {
-    background: lavender;
+    background: #f4f4fc;
 }
 
 * {
@@ -9,19 +9,20 @@ body {
 h1 {
     font-family: Arial;
     font-size: 1.2em;
-    padding: 0 0 0 0.4em;
+    padding: 1em 0 0 0.4em;
 }
 
 hr {
-    background: blueviolet;
+    background: #b98ee1;
     padding: 0.1em;
     height: 0.1em;
     border: none;
 }
 
 .accordion {
+    border-radius: 35px;
     width: 40%;
-    background-color: #bcfaae;
+    background-color: #dff6da;
     margin: 0 auto;
     cursor: pointer;
 }
