@@ -19,7 +19,7 @@ hr {
 }
 
 .accordion {
-    width: 50%;
+    width: 40%;
     background-color: #bcfaae;
     margin: 0 auto;
     cursor: pointer;
@@ -64,7 +64,7 @@ hr {
     transition: all 5s ease-in-out;;
     height: 100%;
     width: 100%;
-    padding: 2% 20% 2% 20%;
+    padding: 2% 30% 2% 30%;
 }
 
 .ac_inp:checked + label + .hidden_div {
@@ -110,9 +110,18 @@ hr {
     color: black;
 }
 
-@media screen and (max-width: 56.25rem) and (min-width: 37.5rem), (min-width: 68.75rem) {
-    .img {
-        height: 100%;
-        width: 100%;
+@media (max-height: 568px) and (max-width: 320px) and (hover: none){
+    .item label, h1 {
+        font-size: 1em;
+    }
+
+     .img {
+        height: 10em;
+    }
+    .ac_inp:checked + label + .hidden_div {
+        overflow: auto;
+        height: 10em;
+        transition: 0.5s;
+        color: black;
     }
 }
