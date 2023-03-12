@@ -1,35 +1,39 @@
 body {
     background: lavender;
 }
-*{
-    box-sizing:border-box;
+
+* {
+    box-sizing: border-box;
 }
 
- h1{
-     padding: 0 0 0 0.2em;
- }
- hr {
-     background: blueviolet;
-     padding: 0.1em;
-     height: 0.1em;
-     border: none;
- }
+h1 {
+    padding: 0 0 0 0.2em;
+}
+
+hr {
+    background: blueviolet;
+    padding: 0.1em;
+    height: 0.1em;
+    border: none;
+}
 
 .accordion {
     width: 50%;
     background-color: lightgreen;
     margin: 0 auto;
     cursor: pointer;
-
 }
+
 .ac_inp {
     display: none;
 }
+
 .item {
     font-weight: bold;
 }
 
 .item label {
+    color: orangered;
     cursor: pointer;
     display: flex;
     padding: 0.4em;
@@ -37,10 +41,10 @@ body {
     justify-content: space-between;
 }
 
+
 .hidden_div {
     height: 0;
     overflow: hidden;
-    transition: 0.5s;
 }
 
 .item:hover ~ .hidden_div {
@@ -59,14 +63,20 @@ body {
     transition: all 5s ease-in-out;;
     height: 100%;
     width: 100%;
-    padding: 2% 20% 2% 20% ;
+    padding: 2% 20% 2% 20%;
 }
 
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
     height: 25em;
     transition: 0.5s;
+    color: black;
 }
+
+.ac_inp:checked ~ label {
+    color: black;
+}
+
 .plus {
     height: 1em;
     width: 1em;
@@ -77,15 +87,29 @@ body {
     opacity: 90%;
 }
 
-.item:hover .plus{
-    transform:  rotate(50deg);
-}
-.ac_inp:checked~ label .plus{
-    transform-origin: center center;
-    transform:  rotate(50deg);
+.item:hover .plus {
+    transform: rotate(50deg);
     opacity: 90%;
+    transition: 1s ease-out;
 }
 
-.ac_inp:checked~ .plus {
+.ac_inp:checked ~ label .plus {
+    transform-origin: center center;
+    transform: rotate(50deg);
     opacity: 90%;
+    transition: 1s ease-out;
+
 }
+
+.img:active {
+    height: 25em;
+}
+
+.accordion:hover {
+    color: black;
+}
+
+.accordion:hover label {
+    color: black;
+}
+
