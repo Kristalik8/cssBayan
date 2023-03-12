@@ -7,7 +7,8 @@ body {
 }
 
 h1 {
-    padding: 0 0 0 0.2em;
+    font-size: 3em;
+    padding: 0 0 0 0.4em;
 }
 
 hr {
@@ -33,7 +34,7 @@ hr {
 }
 
 .item label {
-    font-size: 1.2em;
+    font-size: 3em;
     color: orangered;
     cursor: pointer;
     display: flex;
@@ -41,7 +42,6 @@ hr {
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 .hidden_div {
     height: 0;
@@ -55,7 +55,7 @@ hr {
 
 .ac_inp:hover + label + .hidden_div {
     overflow: auto;
-    height: 30em;
+    height: 80em;
     transition: 0.5s;
 }
 
@@ -69,7 +69,7 @@ hr {
 
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
-    height: 30em;
+    height: 80em;
     transition: 0.5s;
     color: black;
 }
