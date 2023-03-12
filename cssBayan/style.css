@@ -57,7 +57,7 @@ hr {
 
 .ac_inp:hover + label + .hidden_div {
     overflow: auto;
-    height: 25em;
+    height: 30em;
     transition: 0.5s;
 }
 
@@ -66,12 +66,12 @@ hr {
     transition: all 5s ease-in-out;;
     height: 100%;
     width: 100%;
-    padding: 2% 30% 2% 30%;
+    padding: 2% 22% 2% 22%;
 }
 
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
-    height: 25em;
+    height: 30em;
     transition: 0.5s;
     color: black;
 }
@@ -112,7 +112,7 @@ hr {
     color: black;
 }
 
-@media (max-height: 568px) and (max-width: 320px) and (hover: none) {
+@media (hover: none) and (pointer: coarse) {
     .item label, h1 {
         font-size: 0.5em;
     }
