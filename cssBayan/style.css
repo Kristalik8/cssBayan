@@ -54,7 +54,7 @@ hr {
 
 .ac_inp:hover + label + .hidden_div {
     overflow: auto;
-    height: 25em;
+    height: 30em;
     transition: 0.5s;
 }
 
@@ -68,7 +68,7 @@ hr {
 
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
-    height: 25em;
+    height: 30em;
     transition: 0.5s;
     color: black;
 }
@@ -101,10 +101,6 @@ hr {
 
 }
 
-.img:active {
-    height: 25em;
-}
-
 .accordion:hover {
     color: black;
 }
@@ -113,3 +109,9 @@ hr {
     color: black;
 }
 
+@media screen and (max-width: 56.25rem) and (min-width: 37.5rem), (min-width: 68.75rem) {
+    .img {
+        height: 100%;
+        width: 100%;
+    }
+}
