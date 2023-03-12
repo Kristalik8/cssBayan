@@ -7,7 +7,8 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-family: Arial;
+    font-size: 1.2em;
     padding: 0 0 0 0.4em;
 }
 
@@ -34,7 +35,8 @@ hr {
 }
 
 .item label {
-    font-size: 3em;
+    font-family: Arial;
+    font-size: 1.2em;
     color: orangered;
     cursor: pointer;
     display: flex;
@@ -55,7 +57,7 @@ hr {
 
 .ac_inp:hover + label + .hidden_div {
     overflow: auto;
-    height: 30em;
+    height: 25em;
     transition: 0.5s;
 }
 
@@ -69,7 +71,7 @@ hr {
 
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
-    height: 30em;
+    height: 25em;
     transition: 0.5s;
     color: black;
 }
@@ -112,7 +114,7 @@ hr {
 
 @media (max-height: 568px) and (max-width: 320px) and (hover: none) {
     .item label, h1 {
-        font-size: 1em;
+        font-size: 0.5em;
     }
 
     .img {
