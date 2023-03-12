@@ -19,7 +19,7 @@ hr {
 
 .accordion {
     width: 50%;
-    background-color: lightgreen;
+    background-color: #bcfaae;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -33,6 +33,7 @@ hr {
 }
 
 .item label {
+    font-size: 1.2em;
     color: orangered;
     cursor: pointer;
     display: flex;
