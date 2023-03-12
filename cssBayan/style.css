@@ -110,14 +110,15 @@ hr {
     color: black;
 }
 
-@media (max-height: 568px) and (max-width: 320px) and (hover: none){
+@media (max-height: 568px) and (max-width: 320px) and (hover: none) {
     .item label, h1 {
         font-size: 1em;
     }
 
-     .img {
+    .img {
         height: 10em;
     }
+
     .ac_inp:checked + label + .hidden_div {
         overflow: auto;
         height: 10em;
