@@ -20,7 +20,7 @@ hr {
 }
 
 .accordion {
-    border-radius: 35px;
+    border-radius: 2.2em;
     width: 40%;
     background-color: #dff6da;
     margin: 0 auto;
@@ -51,7 +51,12 @@ hr {
     overflow: hidden;
 }
 
-.item:hover ~ .hidden_div {
+.item + .img:hover ~ .hidden_div {
+    display: block;
+    height: auto;
+}
+
+.hidden_div:hover {
     display: block;
     height: auto;
 }
@@ -59,7 +64,13 @@ hr {
 .ac_inp:hover + label + .hidden_div {
     overflow: auto;
     height: 30em;
-    transition: 0.5s;
+    transition: 1s;
+}
+
+.item:hover + label + .hidden_div {
+    overflow: auto;
+    height: 30em;
+    transition: 1s;
 }
 
 .img {
@@ -73,7 +84,7 @@ hr {
 .ac_inp:checked + label + .hidden_div {
     overflow: auto;
     height: 30em;
-    transition: 0.5s;
+    transition: 1s;
     color: black;
 }
 
@@ -97,12 +108,10 @@ hr {
     transition: 1s ease-out;
 }
 
-.ac_inp:checked ~ label .plus {
-    transform-origin: center center;
+.ac_inp:checked .plus {
     transform: rotate(50deg);
     opacity: 90%;
     transition: 1s ease-out;
-
 }
 
 .accordion:hover {
@@ -113,9 +122,58 @@ hr {
     color: black;
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media screen and (min-width: 1200px) {
+    .item label, h1 {
+        font-size: 0.9em;
+    }
+
+    .img {
+        height: 20em;
+    }
+
+    .ac_inp:checked + label + .hidden_div {
+        overflow: auto;
+        height: 20em;
+        transition: 0.5s;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .item label, h1 {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .item label, h1 {
+        font-size: 0.9em;
+    }
+
+    .img {
+        height: 20em;
+    }
+
+    .ac_inp:checked + label + .hidden_div {
+        overflow: auto;
+        height: 20em;
+        transition: 0.5s;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .item label, h1 {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (min-width: 350px) {
     .item label, h1 {
         font-size: 0.5em;
+    }
+    .accordion {
+        border-radius: 1em;
     }
 
     .img {
