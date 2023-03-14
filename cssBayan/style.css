@@ -1,0 +1,158 @@
+body {
+    background: #f4f4fc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.2em;
+    padding: 1em 0 0 0.4em;
+}
+
+hr {
+    background: #b98ee1;
+    padding: 0.1em;
+    height: 0.1em;
+    border: none;
+}
+
+.accordion {
+    border-radius: 2.1em;
+    width: 40%;
+    background-color: #dff6da;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.ac_inp {
+    visibility: hidden
+}
+
+.item {
+    font-weight: bold;
+}
+
+.item label {
+    font-size: 1.2em;
+    color: orangered;
+    cursor: pointer;
+    display: flex;
+    padding: 0.4em;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hidden_div {
+    height: 0;
+    overflow: hidden;
+}
+
+.item + .img:hover ~ .hidden_div {
+    display: block;
+    height: auto;
+}
+
+.hidden_div:hover {
+    display: block;
+    height: auto;
+}
+
+.ac_inp:hover + label + .hidden_div {
+    overflow: auto;
+    height: 30em;
+    transition: 1s;
+}
+
+.item:hover + label + .hidden_div {
+    overflow: auto;
+    height: 30em;
+    transition: 1s;
+}
+
+.img {
+    display: flex;
+    transition: all 5s ease-in-out;;
+    height: 100%;
+    width: 100%;
+    padding: 2% 22% 2% 22%;
+}
+.hidden_div:active + .img {
+    overflow: auto;
+    height: 30em;
+    transition: 1s;
+    color: black;
+}
+
+.ac_inp:checked + label + .hidden_div{
+    overflow: auto;
+    height: 30em;
+    transition: 1s;
+    color: black;
+}
+
+.ac_inp:checked ~ label {
+    color: black;
+}
+
+.plus {
+    height: 1em;
+    width: 1em;
+    opacity: 0;
+}
+
+.hidden_div .img:active {
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.accordion:hover .plus {
+    opacity: 90%;
+}
+
+.item:hover .plus {
+    transform: rotate(50deg);
+    opacity: 90%;
+    transition: 1s ease-out;
+}
+
+.ac_inp:checked ~ label .plus {
+    transform: rotate(50deg);
+    transition: 1s ease-out;
+}
+
+.accordion:hover {
+    color: black;
+}
+
+.accordion:hover label {
+    color: black;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .item label, h1 {
+        font-size: 0.5em;
+    }
+
+    .accordion {
+        border-radius: 1em;
+    }
+
+    .img {
+        height: 10em;
+    }
+
+    .ac_inp:checked + label + .hidden_div {
+        overflow: auto;
+        height: 10em;
+        transition: 0.5s;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .item label, h1 {
+        font-size: 0.9em;
+    }
+}
