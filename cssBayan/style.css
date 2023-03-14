@@ -27,7 +27,7 @@ hr {
 }
 
 .ac_inp {
-    display: none;
+    visibility: hidden
 }
 
 .item {
