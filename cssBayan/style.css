@@ -78,8 +78,14 @@ hr {
     width: 100%;
     padding: 2% 22% 2% 22%;
 }
+.hidden_div:active + .img {
+    overflow: auto;
+    height: 30em;
+    transition: 1s;
+    color: black;
+}
 
-.ac_inp:checked + label + .hidden_div {
+.ac_inp:checked + label + .hidden_div{
     overflow: auto;
     height: 30em;
     transition: 1s;
@@ -94,6 +100,11 @@ hr {
     height: 1em;
     width: 1em;
     opacity: 0;
+}
+
+.hidden_div .img:active {
+    opacity: 0.5;
+    transition: 0.4s;
 }
 
 .accordion:hover .plus {
