@@ -117,7 +117,7 @@ hr {
     transition: 1s ease-out;
 }
 
-.ac_inp:checked .plus {
+.ac_inp:checked ~ label .plus {
     transform: rotate(50deg);
     opacity: 90%;
     transition: 1s ease-out;
